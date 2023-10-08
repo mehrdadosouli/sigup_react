@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import validation from './Validation'
+import { validation } from './Validation'
 export default function Signup() {
   const [data,setData]=useState({
     inputName:'',
@@ -8,6 +8,7 @@ export default function Signup() {
     inputConfirm:'',
     inputCheckbox:false,
   })
+  const [error,setError]=useState({})
     
     const changeInputHandler=(e)=>{
       if(e.target.name=='inputCheckbox'){
@@ -21,6 +22,12 @@ export default function Signup() {
         })
       }
     }
+
+    useEffect(()=>{
+      setError(validation(data))
+      console.log(error);
+    },[data])
+
   return (
     <>
         <div className="container">
