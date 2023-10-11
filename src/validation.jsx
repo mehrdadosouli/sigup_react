@@ -1,4 +1,5 @@
 export const validation =(data)=>{
+    const emailvalid=/\w{6}.+@(gmail|email)\.com/g
     const errors={}    
     if(!data.inputName){
         errors.name='please enter the user name'
@@ -6,6 +7,8 @@ export const validation =(data)=>{
         delete errors.name
     }if(!data.inputEmail){
         errors.email='please enter email'
+    }else if(!emailvalid.test(data.inputEmail)){
+        errors.email='please set morthan 6 character or write currect email'
     }else{
         delete errors.email
     }if(!data.inputPassword){
@@ -15,7 +18,7 @@ export const validation =(data)=>{
     }else{
         delete errors.password
     }if(!data.inputConfirm){
-        errors.comfirm='please enter comfirmpassword'
+        errors.comfirm='please enter comfirm password'
     }else if(data.inputConfirm !== data.inputPassword){
         errors.comfirm='your password is not match'
     }else{
