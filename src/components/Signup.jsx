@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { validation } from './validation'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./App.css"
-import {notify} from "./toast.js"
+import "./signup.css"
+import {notify} from "../toast.js"
 export default function Signup() {
   const [data, setData] = useState({
     inputName: '',
@@ -38,7 +38,6 @@ export default function Signup() {
     setFocus({
       ...focus,[e.target.name]:true
     })     
-    console.log(focus);
   }
 
   

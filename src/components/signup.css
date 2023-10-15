@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.singup{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+    border: 1px solid gray;
+    padding: 2rem;
+    color: rgb(41, 144, 196);
+}
+.singup>input{
+    padding: 0.4rem;
+    box-shadow: inset 0 1px 3px 1px rgba(155, 154, 154, 0.425);
+}
+.singup>input:focus{
+    outline: none;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+.btns>button{
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.btns>span,.btns>button{
+    cursor: pointer;
+}
+.errorinput{
+    border:1px solid red;
+}
+.successinput{
+    border:1px solid rgb(120, 122, 120);
+}
+.successinput:focus,.errorinput:focus{
+    border: 1px solid blue;
+}
+.span{
+    color: red;
+}
